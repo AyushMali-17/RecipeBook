@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
     categoryLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
-            const category = link.dataset.category;
+            const category = e.target.dataset.category;
             const filteredRecipes = category === 'all' ? recipes : recipes.filter(recipe => recipe.category === category);
             renderRecipes(filteredRecipes);
         });
@@ -111,6 +111,6 @@ document.addEventListener('DOMContentLoaded', () => {
         body.classList.toggle('dark-mode');
     });
 
-    // Initial rendering of recipes
+    // Initial render
     renderRecipes(recipes);
 });

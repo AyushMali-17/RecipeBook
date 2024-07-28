@@ -5,9 +5,6 @@
 
 
 
-
-/* styles.css */
-
 :root {
     --primary-color: #FF5722; /* Red-Orange */
     --secondary-color: #FFC107; /* Amber */
@@ -127,6 +124,13 @@ body.dark-mode .search-container {
     margin-right: auto;
 }
 
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        margin-top: 150px;
+    }
+}
+
 .sidebar {
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -189,6 +193,10 @@ body.dark-mode main {
     color: var(--dark-text-color);
 }
 
+main section {
+    margin-bottom: 40px;
+}
+
 .recipe-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -208,32 +216,31 @@ body.dark-mode main {
 
 body.dark-mode .recipe {
     background-color: var(--dark-background-color);
-    border-color: var(--dark-text-color);
-}
-
-.recipe h2 {
-    margin-top: 0;
-    font-size: 1.5rem;
-}
-
-.recipe p {
-    margin: 10px 0;
+    color: var(--dark-text-color);
 }
 
 .recipe:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    border-color: #bbb;
+}
+
+.recipe h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.recipe p {
+    margin: 5px 0;
 }
 
 .view-recipe {
     display: inline-block;
-    margin-top: 10px;
     padding: 10px 15px;
     background-color: var(--primary-color);
     color: white;
     border: none;
-    border-radius: 20px;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
 }
@@ -250,6 +257,51 @@ body.dark-mode .view-recipe {
 
 body.dark-mode .view-recipe:hover {
     background-color: var(--primary-color);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+    transition: display 0.3s;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+body.dark-mode .modal-content {
+    background-color: var(--dark-background-color);
+    color: var(--dark-text-color);
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 #add-recipe {
@@ -357,3 +409,5 @@ input:checked + .slider {
 input:checked + .slider:before {
     transform: translateX(14px);
 }
+
+
