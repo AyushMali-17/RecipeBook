@@ -6,16 +6,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Recipe Book</title>
+    <title>Dynamic Recipe Book</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Advanced Recipe Book</h1>
+        <h1>Dynamic Recipe Book</h1>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#recipes">Recipes</a></li>
+                <li><a href="#add-recipe">Add Recipe</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -35,104 +36,21 @@
         </aside>
         <main>
             <section id="recipes" class="recipe-grid">
-                <!-- Example Recipe -->
-                <article class="recipe">
-                    <h2>Spaghetti Carbonara</h2>
-                    <p>Ingredients: Spaghetti, Eggs, Parmesan, Pancetta, Pepper</p>
-                    <button class="view-recipe">View Recipe</button>
-                    <div class="modal">
-                        <div class="modal-content">
-                            <span class="close-button">&times;</span>
-                            <h2>Spaghetti Carbonara</h2>
-                            <p>Ingredients: Spaghetti, Eggs, Parmesan, Pancetta, Pepper</p>
-                            <p>Instructions: Boil pasta, cook pancetta, mix with eggs and cheese, combine with pasta.</p>
-                        </div>
-                    </div>
-                </article>
-              <article class="recipe">
-                <h2>Chicken Curry</h2>
-                <p>Ingredients: Chicken, Curry powder, Coconut milk, Onions, Garlic</p>
-                <button class="view-recipe">View Recipe</button>
-                <div class="modal">
-                    <div class="modal-content">
-                        <span class="close-button">&times;</span>
-                        <h2>Chicken Curry</h2>
-                        <p>Ingredients: Chicken, Curry powder, Coconut milk, Onions, Garlic</p>
-                        <p>Instructions: Cook onions and garlic, add chicken, add curry powder and coconut milk, simmer.</p>
-                    </div>
-                </div>
-            </article>
-            <article class="recipe">
-                <h2>Beef Stew</h2>
-                <p>Ingredients: Beef, Potatoes, Carrots, Onions, Beef broth</p>
-                <button class="view-recipe">View Recipe</button>
-                <div class="modal">
-                    <div class="modal-content">
-                        <span class="close-button">&times;</span>
-                        <h2>Beef Stew</h2>
-                        <p>Ingredients: Beef, Potatoes, Carrots, Onions, Beef broth</p>
-                        <p>Instructions: Brown beef, add vegetables and broth, simmer until tender.</p>
-                    </div>
-                </div>
-            </article>
-            <article class="recipe">
-                <h2>Vegetable Stir-fry</h2>
-                <p>Ingredients: Broccoli, Carrots, Bell peppers, Soy sauce, Garlic</p>
-                <button class="view-recipe">View Recipe</button>
-                <div class="modal">
-                    <div class="modal-content">
-                        <span class="close-button">&times;</span>
-                        <h2>Vegetable Stir-fry</h2>
-                        <p>Ingredients: Broccoli, Carrots, Bell peppers, Soy sauce, Garlic</p>
-                        <p>Instructions: Stir-fry vegetables with garlic, add soy sauce, cook until tender.</p>
-                    </div>
-                </div>
-            </article>
-            <article class="recipe">
-                <h2>Grilled Salmon</h2>
-                <p>Ingredients: Salmon, Lemon, Olive oil, Garlic, Herbs</p>
-                <button class="view-recipe">View Recipe</button>
-                <div class="modal">
-                    <div class="modal-content">
-                        <span class="close-button">&times;</span>
-                        <h2>Grilled Salmon</h2>
-                        <p>Ingredients: Salmon, Lemon, Olive oil, Garlic, Herbs</p>
-                        <p>Instructions: Marinate salmon with lemon, olive oil, and herbs, grill until cooked.</p>
-                    </div>
-                </div>
-            </article>
-            <article class="recipe">
-                <h2>Chocolate Cake</h2>
-                <p>Ingredients: Flour, Sugar, Cocoa powder, Baking powder, Eggs</p>
-                <button class="view-recipe">View Recipe</button>
-                <div class="modal">
-                    <div class="modal-content">
-                        <span class="close-button">&times;</span>
-                        <h2>Chocolate Cake</h2>
-                        <p>Ingredients: Flour, Sugar, Cocoa powder, Baking powder, Eggs</p>
-                        <p>Instructions: Mix ingredients, bake in oven, frost with chocolate icing.</p>
-                    </div>
-                </div>
-            </article>
-            <article class="recipe">
-                <h2>Apple Pie</h2>
-                <p>Ingredients: Apples, Sugar, Cinnamon, Flour, Butter</p>
-                <button class="view-recipe">View Recipe</button>
-                <div class="modal">
-                    <div class="modal-content">
-                        <span class="close-button">&times;</span>
-                        <h2>Apple Pie</h2>
-                        <p>Ingredients: Apples, Sugar, Cinnamon, Flour, Butter</p>
-                        <p>Instructions: Mix apples with sugar and cinnamon, fill pie crust, bake until golden.</p>
-                    </div>
-                </div>
-            </article>
-                <!-- Add more recipes as needed -->
+                <!-- Existing recipes will be inserted here -->
+            </section>
+            <section id="add-recipe">
+                <h2>Add a New Recipe</h2>
+                <form id="recipe-form">
+                    <input type="text" id="recipe-name" placeholder="Recipe Name" required>
+                    <input type="text" id="recipe-ingredients" placeholder="Ingredients (comma separated)" required>
+                    <textarea id="recipe-instructions" placeholder="Instructions" required></textarea>
+                    <button type="submit">Add Recipe</button>
+                </form>
             </section>
         </main>
     </div>
     <footer>
-        <p>&copy; 2024 Advanced Recipe Book. All rights reserved.</p>
+        <p>&copy; 2024 Dynamic Recipe Book. All rights reserved.</p>
     </footer>
     <script src="scripts.js"></script>
 </body>

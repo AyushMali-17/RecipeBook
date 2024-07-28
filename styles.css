@@ -76,6 +76,7 @@ nav ul li a:hover {
 .container {
     display: flex;
     margin-top: 100px;
+    padding: 20px;
 }
 
 .sidebar {
@@ -84,6 +85,9 @@ nav ul li a:hover {
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     margin-right: 20px;
+    position: sticky;
+    top: 100px;
+    align-self: flex-start;
 }
 
 .sidebar h2 {
@@ -159,6 +163,38 @@ main {
 }
 
 .view-recipe:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+#add-recipe {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#recipe-form input,
+#recipe-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#recipe-form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#recipe-form button:hover {
     background-color: #45a049;
     transform: scale(1.05);
 }
