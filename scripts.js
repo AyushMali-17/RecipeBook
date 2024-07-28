@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const recipeForm = document.getElementById('recipe-form');
     const searchBar = document.getElementById('search-bar');
     const categoryLinks = document.querySelectorAll('.sidebar a');
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
 
     const recipes = [
         {
@@ -103,6 +105,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const filteredRecipes = category === 'all' ? recipes : recipes.filter(recipe => recipe.category === category);
             renderRecipes(filteredRecipes);
         });
+    });
+
+    themeToggle.addEventListener('change', () => {
+        body.classList.toggle('dark-mode');
     });
 
     // Initial rendering of recipes
