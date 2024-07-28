@@ -5,6 +5,7 @@
 
 
 
+
 /* styles.css */
 
 body {
@@ -15,7 +16,7 @@ body {
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #333;
     color: white;
     padding: 15px 0;
     text-align: center;
@@ -23,11 +24,12 @@ header {
     width: 100%;
     top: 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1;
 }
 
 h1 {
     margin: 0;
-    font-size: 2rem;
+    font-size: 2.5rem;
     letter-spacing: 1.5px;
 }
 
@@ -71,10 +73,46 @@ nav ul li a:hover {
     outline: none;
 }
 
+.container {
+    display: flex;
+    margin-top: 100px;
+}
+
+.sidebar {
+    width: 200px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-right: 20px;
+}
+
+.sidebar h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.sidebar ul li a:hover {
+    color: #4CAF50;
+}
+
 main {
-    padding: 100px 20px 20px 20px;
-    max-width: 1200px;
-    margin: auto;
+    flex-grow: 1;
+    padding: 20px;
 }
 
 .recipe-grid {
@@ -96,6 +134,10 @@ main {
 .recipe h2 {
     margin-top: 0;
     font-size: 1.5rem;
+}
+
+.recipe p {
+    margin: 10px 0;
 }
 
 .recipe:hover {
@@ -162,4 +204,14 @@ main {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }

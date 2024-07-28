@@ -3,6 +3,10 @@
 
 
 
+// scripts.js
+
+// scripts.js
+
 document.addEventListener('DOMContentLoaded', () => {
     const searchBar = document.getElementById('search-bar');
     const recipes = document.querySelectorAll('.recipe');
@@ -10,7 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     searchBar.addEventListener('keyup', (e) => {
         const searchString = e.target.value.toLowerCase();
         recipes.forEach((recipe) => {
-            if (recipe.innerText.toLowerCase().includes(searchString)) {
+            const recipeText = recipe.innerText.toLowerCase();
+            if (recipeText.includes(searchString)) {
                 recipe.style.display = '';
             } else {
                 recipe.style.display = 'none';
@@ -41,5 +46,22 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-});
 
+    const categoryLinks = document.querySelectorAll('.sidebar ul li a');
+
+    categoryLinks.forEach((link) => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const category = link.getAttribute('href').substring(1);
+            recipes.forEach((recipe) => {
+                if (category === 'all') {
+                    recipe.style.display = '';
+                } else if (recipe.classList.contains(category)) {
+                    recipe.style.display = '';
+                } else {
+                    recipe.style.display = 'none';
+                }
+            });
+        });
+    });
+});
