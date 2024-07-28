@@ -1,5 +1,4 @@
 // taking help from ChatGpt while coding , and understanding the concepts and code via YT
-
 // scripts.js
 
 
@@ -18,4 +17,29 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    const viewRecipeButtons = document.querySelectorAll('.view-recipe');
+    const modals = document.querySelectorAll('.modal');
+    const closeButtons = document.querySelectorAll('.close-button');
+
+    viewRecipeButtons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            modals[index].style.display = 'block';
+        });
+    });
+
+    closeButtons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            modals[index].style.display = 'none';
+        });
+    });
+
+    window.addEventListener('click', (e) => {
+        modals.forEach((modal) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    });
 });
+
