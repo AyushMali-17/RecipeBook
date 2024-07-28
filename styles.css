@@ -1,8 +1,10 @@
 /* taking help from ChatGpt while coding , and understanding the concepts and code via YT */
-
-
-
 /* styles.css */
+
+
+
+
+
 
 body {
     font-family: Arial, sans-serif;
@@ -16,14 +18,38 @@ header {
     color: white;
     padding: 10px 0;
     text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
 }
 
 h1 {
     margin: 0;
 }
 
-main {
-    padding: 20px;
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+#search-bar {
+    margin-top: 10px;
+    padding: 5px;
+    width: 80%;
+}
+
+.main {
+    padding: 70px 20px 20px 20px;
 }
 
 .recipe {
@@ -37,3 +63,11 @@ main {
 .recipe h2 {
     margin-top: 0;
 }
+
+.recipe:hover {
+    background-color: #f9f9f9;
+    border-color: #bbb;
+}
+
+
+
